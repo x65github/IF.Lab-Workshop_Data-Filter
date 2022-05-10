@@ -38,6 +38,10 @@
   </tr>
 </table>
 
+<h3>程式套件(開源)/h3>
+PyPDF2
+PyMuPDF 1.19.6 https://pymupdf.readthedocs.io/en/latest/
+
 <h3>程式流程圖</h3>
 
 ![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_ProgramFlowchart.png)
