@@ -39,8 +39,10 @@
 </table>
 
 <h3>程式套件(開源)</h3>
-PyPDF2
-PyMuPDF 1.19.6 https://pymupdf.readthedocs.io/en/latest/
+<ol>
+  <li>PyPDF2</li>
+  <li>PyMuPDF 1.19.6 https://pymupdf.readthedocs.io/en/latest/</li>
+</ol>
 
 <h3>程式流程圖</h3>
 
