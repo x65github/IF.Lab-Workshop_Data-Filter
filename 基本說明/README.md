@@ -1,9 +1,9 @@
-# IF.Lab Side Project Workshop-第一組 Data Filter
+# IF.Lab Side Project Workshop- Data Filter
 
 ### 基本資料
 <ul>
 　<li>組別：第一組</li>
-  <li>成員：劉語萱 09170101、陳柏尹 09170109、(組長)廖曉珺 09170131</li>
+  <li>成員：09170101劉語萱、09170109陳柏尹、(組長)09170131廖曉珺</li>
   <li>會議時間：每週五 10 點 30 分（備用時間：每週六 10 點 30 分）</li>
   <li>專案網址：https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</li>
 </ul>
@@ -57,3 +57,63 @@
 - [ ] v1.0_功能E.PDF修改
 - [ ] v2.0_功能F.關鍵字判斷
 - [ ] v2.0_功能G.關鍵字生成
+
+# IF.Lab Side Project Workshop- Data Filter
+
+### 基本資料
+<ul>
+　<li>Group :group 1</li>
+  <li>Members：Vivian, Tippi, Amy(Leader)</li>
+  <li>Meeting time: 22:30 each Friday（Back up：22:30 each Saturday）</li>
+  <li>Project URL：https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</li>
+</ul>
+
+### Project time
+<ul>
+　<li>Last：16 weeks</li>
+  <li>Start：4/20</li>
+  <li>End：8/10</li>
+</ul>
+
+### situational example
+<table>
+  <tr>
+    <td>process</td>
+    <td>Example</td>
+  </tr>
+  <tr>
+    <td>import “filename isn’t the title of the paper” pdf</td>
+    <td>Import 123.pdf</td>
+  </tr>
+  <tr>
+    <td>(Function A) select main paper </td>
+    <td>P.1-last page of paperA<br>p.2~16-content of paperB<br>p.17-beginning of paperC</td>
+  </tr>
+  <tr>
+    <td>(Function A) delete redundant data</td>
+    <td>delete p.1&p.17<br>keep p.2~16</td>
+  </tr>
+  <tr>
+    <td>(functionB~D)identify information from content</td>
+    <td>identify author, title and abstract of the paper from the content</td>
+  </tr>
+  <tr>
+    <td>(functionB~D) correct the information of the pdf file</td>
+    <td>1.create author, title and abstract in meta<br>2.correct the filename into the title of the paper</td>
+  </tr>
+  <tr>
+    <td>(Function E) export file(with filename corrected to title)</td>
+    <td>export B.pdf</td>
+  </tr>
+</table>
+
+## Development progress
+- [ ] Python template
+- [ ] v1.0_main program process
+- [ ] v1.0_Function A- identify paper range
+- [ ] v1.0_Function B- identify title
+- [ ] v1.0_Function C- identify author
+- [ ] v1.0_Function D- identify abstract
+- [ ] v1.0_Function E- correct pdf
+- [ ] v2.0_Function F- identify keywords
+- [ ] v2.0_Function G- create keywords
