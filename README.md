@@ -31,7 +31,7 @@ import PyPDF2
 pip3 install PyMuPDF
 import fitz
 ```
-### 程式流程圖
-![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_ProgramFlowchart.png)
+### Program Flowchart
+![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_En_ProgramFlowchart.png)
 ## How To Do
 > TBD
