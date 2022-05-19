@@ -47,7 +47,7 @@
   </tr>
 </table>
 
-## 開發進度
+## 階段目標
 - [ ] Python範本
 - [ ] v1.0_主程式流程
 - [ ] v1.0_功能A.論文範圍判斷
@@ -60,7 +60,7 @@
 
 # IF.Lab Side Project Workshop- Data Filter
 
-### 基本資料
+### General Information
 <ul>
 　<li>Group :group 1</li>
   <li>Members：Vivian, Tippi, Amy(Leader)</li>
@@ -68,14 +68,14 @@
   <li>Project URL：https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</li>
 </ul>
 
-### Project time
+### Project Time
 <ul>
 　<li>Last：16 weeks</li>
   <li>Start：4/20</li>
   <li>End：8/10</li>
 </ul>
 
-### situational example
+### Situational Example
 <table>
   <tr>
     <td>process</td>
@@ -107,7 +107,7 @@
   </tr>
 </table>
 
-## Development progress
+## Scheduled Milestone
 - [ ] Python template
 - [ ] v1.0_main program process
 - [ ] v1.0_Function A- identify paper range
