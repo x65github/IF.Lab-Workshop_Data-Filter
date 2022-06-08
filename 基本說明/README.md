@@ -48,15 +48,16 @@
 </table>
 
 ## 階段目標
-- [ ] Python範本
+- [X] 測試集
+- [ ] 判斷集
 - [ ] v1.0_主程式流程
 - [ ] v1.0_功能A.論文範圍判斷
 - [ ] v1.0_功能B.標題判斷
 - [ ] v1.0_功能C.作者判斷
 - [ ] v1.0_功能D.摘要判斷
 - [ ] v1.0_功能E.PDF修改
+- [ ] Python範本
 - [ ] v2.0_功能F.關鍵字判斷
-- [ ] v2.0_功能G.關鍵字生成
 
 # IF.Lab Side Project Workshop- Data Filter
 
@@ -108,12 +109,13 @@
 </table>
 
 ## Scheduled Milestone
-- [ ] Python template
+- [ ] Training Set
+- [ ] Test Set
 - [ ] v1.0_main program process
 - [ ] v1.0_Function A- identify paper range
 - [ ] v1.0_Function B- identify title
 - [ ] v1.0_Function C- identify author
 - [ ] v1.0_Function D- identify abstract
 - [ ] v1.0_Function E- correct pdf
+- [ ] Python template
 - [ ] v2.0_Function F- identify keywords
-- [ ] v2.0_Function G- create keywords
