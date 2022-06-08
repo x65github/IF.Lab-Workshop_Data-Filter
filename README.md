@@ -5,6 +5,7 @@
 ### Python3
 ### PyPDF2
 ```
+pip3 install PyPDF2 #安裝PyPDF2套件
 import PyPDF2 #導入PyPDF2套件
 ```
 ### PyMuPDF
@@ -24,6 +25,7 @@ write contents into pdf meta, and delete unwanted information in unspecific  pap
 ### Python3
 ### PyPDF2
 ```
+pip3 install PyPDF2
 import PyPDF2
 ```
 ### PyMuPDF
