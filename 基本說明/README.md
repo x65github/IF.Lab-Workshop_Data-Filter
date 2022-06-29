@@ -49,7 +49,8 @@
 
 ## 階段目標
 - [X] 測試集
-- [ ] 判斷集
+- [X] 判斷集
+- [X] 資料EDA
 - [ ] v1.0_主程式流程
 - [ ] v1.0_功能A.論文範圍判斷
 - [ ] v1.0_功能B.標題判斷
@@ -109,8 +110,8 @@
 </table>
 
 ## Scheduled Milestone
-- [ ] Training Set
-- [ ] Test Set
+- [X] Training Set
+- [X] Test Set
 - [ ] v1.0_main program process
 - [ ] v1.0_Function A- identify paper range
 - [ ] v1.0_Function B- identify title
