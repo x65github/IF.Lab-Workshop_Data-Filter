@@ -1,122 +1,81 @@
 # IF.Lab Side Project Workshop- Data Filter
 
 ### 基本資料
-<ul>
-　<li>組別：第一組</li>
-  <li>成員：09170101劉語萱、09170109陳柏尹、(組長)09170131廖曉珺</li>
-  <li>會議時間：每週五 10 點 30 分（備用時間：每週六 10 點 30 分）</li>
-  <li>專案網址：https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</li>
-</ul>
-
-### 專案時間
-<ul>
-　<li>時長：16 週</li>
-  <li>開始日：4/20</li>
-  <li>結束日：8/10</li>
-</ul>
-
-### 情境範例
 <table>
   <tr>
-    <td>流程</td>
-    <td>舉例</td>
+    <td>組別</td>
+    <td>第一組</td>
   </tr>
   <tr>
-    <td>匯入/選取「檔名非論文名稱」的 PDF 檔</td>
-    <td>匯入/選取 123.pdf</td>
+    <td>成員</td>
+    <td>09170101劉語萱、09170109陳柏尹、(組長)09170131廖曉珺</td>
   </tr>
   <tr>
-    <td>(功能A)篩選出與「主要」論文相關的論文資料</td>
-    <td>第 1 頁：論文 A 的最末頁<br>第 2~16 頁：論文 B 的內容<br>第 17 頁：論文 C 的起始頁</td>
+    <td>開發時間</td>
+    <td>2022/4/20至2022/6/10、2022/7/4至2022/9/20(約 18 週)</td>
   </tr>
   <tr>
-    <td>(功能A)刪除其他雜訊</td>
-    <td>刪除第 1 頁、第 17 頁的內容<br>保留第 2~16 頁</td>
+    <td>程式語言</td>
+    <td>Python 3.9.12</td>
   </tr>
   <tr>
-    <td>(功能B~D)判斷論文資訊</td>
-    <td>從內文判別論文的作者、論文標題、論文摘要</td>
+    <td>主要套件</td>
+    <td>PDFminer、Pymupdf</td>
   </tr>
   <tr>
-    <td>(功能B~D)修改PDF的資訊</td>
-    <td>在PDF的Meta內新增作者、論文標題、論文摘要<br>修改PEF的檔名</td>
-  </tr>
-  <tr>
-    <td>(功能E)匯出 PDF 檔案（檔名為論文名稱）</td>
-    <td>匯出 B.pdf</td>
+    <td>專案網址</td>
+    <td>https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</td>
   </tr>
 </table>
 
 ## 階段目標
-- [X] 測試集
-- [X] 判斷集
 - [X] 資料EDA
-- [ ] v1.0_主程式流程
-- [ ] v1.0_功能A.論文範圍判斷
-- [ ] v1.0_功能B.標題判斷
-- [ ] v1.0_功能C.作者判斷
-- [ ] v1.0_功能D.摘要判斷
-- [ ] v1.0_功能E.PDF修改
-- [ ] Python範本
-- [ ] v2.0_功能F.關鍵字判斷
+- [X] 程式流程設計
+- [X] 功能A.Meta讀取與寫入
+- [X] 功能B.標題判斷
+- [X] 功能C.作者判斷
+- [X] 功能D.摘要判斷
+- [X] 功能E.關鍵字判斷
+- [X] 功能F.DOI判斷
+- [X] 功能G.發佈日期判斷
 
 # IF.Lab Side Project Workshop- Data Filter
 
 ### General Information
-<ul>
-　<li>Group :group 1</li>
-  <li>Members：Vivian, Tippi, Amy(Leader)</li>
-  <li>Meeting time: 22:30 each Friday（Back up：22:30 each Saturday）</li>
-  <li>Project URL：https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</li>
-</ul>
-
-### Project Time
-<ul>
-　<li>Last：16 weeks</li>
-  <li>Start：4/20</li>
-  <li>End：8/10</li>
-</ul>
-
-### Situational Example
 <table>
   <tr>
-    <td>process</td>
-    <td>Example</td>
+    <td>Group</td>
+    <td>group 1</td>
   </tr>
   <tr>
-    <td>import “filename isn’t the title of the paper” pdf</td>
-    <td>Import 123.pdf</td>
+    <td>Members</td>
+    <td>Vivian, Tippi, Amy(Leader)</td>
   </tr>
   <tr>
-    <td>(Function A) select main paper </td>
-    <td>P.1-last page of paperA<br>p.2~16-content of paperB<br>p.17-beginning of paperC</td>
+    <td>Project Time</td>
+    <td>2022/4/20~2022/6/10、2022/7/4~2022/9/20(about 18 weeks)</td>
   </tr>
   <tr>
-    <td>(Function A) delete redundant data</td>
-    <td>delete p.1&p.17<br>keep p.2~16</td>
+    <td>Launage</td>
+    <td>Python 3.9.12</td>
   </tr>
   <tr>
-    <td>(functionB~D)identify information from content</td>
-    <td>identify author, title and abstract of the paper from the content</td>
+    <td>Package</td>
+    <td>PDFminer、Pymupdf</td>
   </tr>
   <tr>
-    <td>(functionB~D) correct the information of the pdf file</td>
-    <td>1.create author, title and abstract in meta<br>2.correct the filename into the title of the paper</td>
-  </tr>
-  <tr>
-    <td>(Function E) export file(with filename corrected to title)</td>
-    <td>export B.pdf</td>
+    <td>Project URL</td>
+    <td>https://github.com/x65github/IF.Lab-Workshop_Data-Filter.gi</td>
   </tr>
 </table>
 
 ## Scheduled Milestone
-- [X] Training Set
-- [X] Test Set
-- [ ] v1.0_main program process
-- [ ] v1.0_Function A- identify paper range
-- [ ] v1.0_Function B- identify title
-- [ ] v1.0_Function C- identify author
-- [ ] v1.0_Function D- identify abstract
-- [ ] v1.0_Function E- correct pdf
-- [ ] Python template
-- [ ] v2.0_Function F- identify keywords
+- [X] Exploratory Data Analysis
+- [X] main program process
+- [X] Function A- reading and writing metadata
+- [X] Function B- identify title
+- [X] Function C- identify author
+- [X] Function D- identify abstract
+- [X] Function E- identify keywords
+- [X] Function F- identify DOI
+- [X] Function G- identify published date
