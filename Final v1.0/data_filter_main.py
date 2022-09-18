@@ -1,16 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from tkinter import N
-import fitz
-from pdfminer.pdfpage import PDFPage
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.converter import PDFPageAggregator
-from pdfminer.layout import LAParams, LTText, LTChar, LTAnno, LTTextLine, LTTextBox
 from glob import glob
 from os import path
-import math
 import pathlib
-import sys
 from data_filter_pdf import getmaxtxt,dopdf,author_maybe,getkw,getab,iftime,getdoi,writemeta
 
 def ifitem(status,maintxt,metaitems): 
