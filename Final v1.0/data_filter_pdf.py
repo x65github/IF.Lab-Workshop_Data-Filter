@@ -4,11 +4,8 @@ import fitz
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import PDFPageAggregator
-from pdfminer.layout import LAParams, LTText, LTChar, LTAnno, LTTextLine, LTTextBox
-from glob import glob
-from os import path
-import math,sys,re,pathlib
-
+from pdfminer.layout import LAParams, LTText, LTChar, LTAnno
+import math,re
 
 def writemeta(pattern_out,pattern_in,pdf_document,metaiteams):
   '''將判斷的資料放入meta內'''
@@ -28,7 +25,6 @@ def writemeta(pattern_out,pattern_in,pdf_document,metaiteams):
 
   file_out = open(pattern_out+pdf_document, 'wb')
   pdf_merger.write(file_out)
-  print(pattern_out+pdf_document)
   file_in.close()
   file_out.close()
 
