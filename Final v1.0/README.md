@@ -62,7 +62,7 @@ PyPDF2、PyMuPDF、PDFMiner
 進行EDA時，我們發現關鍵字皆以```"keyword"```作為關鍵字標題，因此以```"keyword"```作為關鍵字的判斷依據。
 
 ### 注意事項
-1. 若論文內沒有```"keyword"```，則沒有關鍵字
+1. 若論文內沒有```"keyword"```，則代表該論文無關鍵字
 2. 由於論文內容```maintxt```是用```"introduction"```進行分割，若無此詞且摘要後有非摘要的內容則會出錯
 
 ### 判斷流程```getkw(maintxt)```
@@ -76,8 +76,10 @@ PyPDF2、PyMuPDF、PDFMiner
 進行EDA時，我們發現作者標題多以author、writer作為關鍵字，或以```,```、```;```、```and```直接列出作者，或直接標示於論文標題下方，因此以此進行相關判斷。
 
 ### 注意事項
+1. 
+### 判斷流程```author_maybe(maintxt,title_list)```
+*  若論文標題```title_list```非```None```則先呼叫```aftertitle(maintxt,title_list)```以判斷標題後方是否有作者(詳見標題後作者判斷```aftertitle(maintxt,title_list)```)
 
-### 判斷流程
 
 ---
 ## F.發佈時間判斷
@@ -91,4 +93,6 @@ PyPDF2、PyMuPDF、PDFMiner
 *  若```：```後方無文字則讀取下一行文字，否則回傳```：```後方的文字
 ---
 ## G.DOI判斷
-*  進行EDA時，我們發現關鍵字皆以```"doi"```作為doi標題，因此以```"doi"```作為關鍵字的判斷依據。
+
+### 判斷原理
+進行EDA時，我們發現關鍵字皆以```"doi"```作為doi標題，因此以```"doi"```作為關鍵字的判斷依據。
