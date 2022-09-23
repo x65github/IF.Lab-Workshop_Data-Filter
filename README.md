@@ -6,16 +6,16 @@
 ### PyPDF2
 ```
 pip3 install PyPDF2 #安裝PyPDF2套件
-from PyPDF2 import PdfFileReader, PdfFileWriter #導入PyPDF2套件
+from PyPDF2 import PdfFileReader, PdfFileWriter #導入PyPDF2套件，主要用以寫入meta
 ```
 ### PyMuPDF
 ```
 pip3 install PyMuPDF #安裝PyMuPDF套件
-import fitz #導入PyMuPDF套件
+import fitz #導入PyMuPDF套件，主要用以判斷論文內的各項目
 ```
 ### PDFMiner
 ```
-pip install pdfminer.six #安裝PDFMiner套件
+pip install pdfminer.six #安裝PDFMiner套件，主要用以判斷標題
 '''導入需要的套件'''
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
