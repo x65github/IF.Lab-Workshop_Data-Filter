@@ -34,48 +34,49 @@ def ifitem(status,maintxt,metaitems):
         metaitems['DOI']=doi
     return metaitems
 
-maintxt=""
-pattern_in = input("請輸入pdf來源(輸入here為現在所在路徑):")  
-if pattern_in=="here":
-    pattern=str(pathlib.Path().absolute())
-    pattern_in=pattern+"\\"
+def main(pattern_in,pattern_out):
+    maintxt=""
+    if pattern_in=="here":
+        pattern=str(pathlib.Path().absolute())
+        pattern_in=pattern+"\\"
 
-pattern_out = input("請輸入pdf目的地(輸入here為現在所在路徑):")
-if pattern_out=="here":
-    pattern=str(pathlib.Path().absolute())
-    pattern_out=pattern+"\\" 
+    if pattern_out=="here":
+        pattern=str(pathlib.Path().absolute())
+        pattern_out=pattern+"\\" 
 
-files = [ path.basename(x) for x in glob(pattern_in+"*.pdf")] #取得所有PDF的檔名
-for i in range(0,len(files)):
-    #pdf_document = files[i]
-    pdf_document = "A database design for musical information.pdf"
-    print("\n",pdf_document,"：")
-    conti=input('stop?：')
-    if conti !='n': 
-        break
-    try:
-        rt=dopdf(pattern_in,pdf_document) #抓特定內容及判斷總頁數
+    files = [ path.basename(x) for x in glob(pattern_in+"*.pdf")] #取得所有PDF的檔名
+    for i in range(0,len(files)):
+        pdf_document = files[i]
+        print(pdf_document,"：")
         metaitems={'Producer':'https://github.com/x65github/IF.Lab-Workshop_Data-Filter'}
-        pages=rt[0]
-        lcpage=rt[1]
-        maintxt=rt[2]
-        metaitems['Pages']=pages
-    except Exception as e:
-        print('此論文無法開啟，錯誤原因：',e)
-        continue
+        try:
+            rt=dopdf(pattern_in,pdf_document) #抓特定內容及判斷總頁數
+            pages=rt[0]
+            lcpage=rt[1]
+            maintxt=rt[2]
+            metaitems['Pages']=pages
+        except Exception as e:
+            print('此論文無法開啟，錯誤原因：',e)
+            continue
+        iftitle(pattern_in,pdf_document,lcpage,maintxt)
 
-    try:
-        rt=getmaxtxt(pattern_in+pdf_document,lcpage) #判斷標題(回傳list型態的各行標題)
-        title_list=rt[0]
-        title=rt[1]
-        metaitems['Title']=title
-    except Exception as e:
-        print('此論文無法判斷標題，錯誤原因：',e)
-  
-    '''判斷剩餘項目'''
-    metaitems=ifitem('abstract',maintxt,metaitems)
-    metaitems=ifitem('keywords',maintxt,metaitems)
-    metaitems=ifitem('author'+maintxt,title_list,metaitems) 
-    metaitems=ifitem('time',maintxt,metaitems) 
-    metaitems=ifitem('doi',maintxt,metaitems)
-    writemeta(pattern_out,pattern_in,pdf_document,metaitems)
+def iftitle(pattern_in,pdf_document,lcpage,maintxt):
+        try:
+            rt=getmaxtxt(pattern_in+pdf_document,lcpage) #判斷標題(回傳list型態的各行標題)
+            title_list=rt[0]
+            title=rt[1]
+            metaitems['Title']=title
+        except Exception as e:
+            print('此論文無法判斷標題，錯誤原因：',e)
+    
+        '''判斷剩餘項目'''
+        metaitems=ifitem('abstract',maintxt,metaitems)
+        metaitems=ifitem('keywords',maintxt,metaitems)
+        metaitems=ifitem('author'+maintxt,title_list,metaitems) 
+        metaitems=ifitem('time',maintxt,metaitems) 
+        metaitems=ifitem('doi',maintxt,metaitems)
+        writemeta(pattern_out,pattern_in,pdf_document,metaitems)
+    
+pattern_in = input("請輸入pdf來源(輸入here為現在所在路徑):")  
+pattern_out = input("請輸入pdf目的地(輸入here為現在所在路徑):")
+main(pattern_in,pattern_out)
