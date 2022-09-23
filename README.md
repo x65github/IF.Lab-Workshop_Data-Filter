@@ -26,10 +26,12 @@ from pdfminer.layout import LAParams, LTText, LTChar, LTAnno
 ![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_ProgramFlowchart.png)
 
 ### 範例程式
+```
 pattern_in = "C:\\" #pdf來源(here為現在所在路徑)
 pattern_out = "C:\\" #pdf目的地(here為現在所在路徑):")
 metaitems=main(pattern_in,pattern_out) 
 # 注意事項：被此程式修改過metadata資料的pdf檔無法使用PyPDF2套件讀取，因為PyPDF2套件僅能讀取pdf內的特定Metadata。
+```
 
 # pdf metadata-data cleaning system(paper)
 write contents into pdf meta, and delete unwanted information in unspecific  paper
