@@ -16,7 +16,7 @@ import fitz #導入PyMuPDF套件
 ### 程式流程圖
 ![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_ProgramFlowchart.png)
 ## 執行方式
-執行main檔
+執行main檔<p>
 注意事項:被此程式修改過metadata資料的pdf檔無法使用PyPDF2套件讀取，因為此套件僅能讀取官方軟體生成的pdf檔案。
 
 # pdf metadata-data cleaning system(paper)
