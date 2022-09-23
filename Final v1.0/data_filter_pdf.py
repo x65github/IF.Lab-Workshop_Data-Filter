@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from PyPDF2 import PdfFileReader, PdfFileMerger
+from PyPDF2 import PdfFileReader, PdfFileWriter
 import fitz
 from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -7,27 +7,38 @@ from pdfminer.converter import PDFPageAggregator
 from pdfminer.layout import LAParams, LTText, LTChar, LTAnno
 import math,re
 
-
-def writemeta(pattern_out,pattern_in,pdf_document,metaiteams):
+def writemeta(pattern_out,pattern_in,pdf_document,title,metaiteams):
   '''將判斷的資料放入meta內'''
+
   file_in = open(pattern_in+pdf_document, 'rb')
   pdf_reader = PdfFileReader(file_in)
-  pdf_merger = PdfFileMerger()
-  pdf_merger.append(file_in)
+  pdf_writer = PdfFileWriter()
+  pdf_writer.appendPagesFromReader(pdf_reader)
+
   for keys,values in metaiteams.items():
     key='/'+keys
     if values is None:
-      pdf_merger.addMetadata({key: "None"})
+      pdf_writer.addMetadata({key: "None"})
     elif isinstance(values,list):
       value=','.join(values)
-      pdf_merger.addMetadata({key: value})
+      pdf_writer.addMetadata({key: value})
     else:
-      pdf_merger.addMetadata({key: values})
+      pdf_writer.addMetadata({key: str(values)})
 
-  file_out = open(pattern_out+pdf_document, 'wb')
-  pdf_merger.write(file_out)
+  if "\n" in title:
+    title=title.replace("\n","")
+  if title[-1]==" ":
+    title=title[:-1]
+  if ":" in title:
+    title=title.replace(":","")
+  
+  title+=".pdf"
+  print(title)
+  with open(pattern_out+title, "wb") as file_out:
+    pdf_writer.write(file_out)
+
   file_in.close()
-  file_out.close()
+
 
 def checkdoi(target): 
   '''確認內容有doi'''
@@ -129,6 +140,9 @@ def getauthor(text):
   elif ',' in target:
     num=target.count(',')+target.count('and')
     clean=re.split(',|and',target)
+  elif 'and' in target:
+    num=target.count('and')
+    clean=re.split('and',target)
   else: 
     if 'author' in target.lower(): 
       return False,False
@@ -136,7 +150,10 @@ def getauthor(text):
       return False,False
     else:
       people=[]
-      people.append(target.title())
+      person = re.sub('[\d_]','',target).strip()
+      check = re.findall('[a-z .·,;]', person) #移除文字右上角的註釋的標號
+      person = ''.join(check).lstrip()
+      people.append(person.title())
       return people,0
 
   for i in range(0,len(clean)):
