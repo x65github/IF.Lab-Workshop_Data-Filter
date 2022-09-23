@@ -63,7 +63,7 @@ PyPDF2、PyMuPDF、PDFMiner
 
 ### 注意事項
 1. 若論文內沒有```"keyword"```，則代表該論文無關鍵字
-2. 由於論文內容```maintxt```是用```"introduction"```進行分割，若無此詞且摘要後有非摘要的內容則會出錯
+2. 由於論文內容```maintxt```是用```"introduction"```進行分割，若無此詞且關鍵字後有非關鍵字的內容則會出錯
 
 ### 判斷流程```getkw(maintxt)```
 *  判斷論文內容```maintxt```內是否有關鍵字```"keyword"```
@@ -116,7 +116,7 @@ PyPDF2、PyMuPDF、PDFMiner
 ## F.發佈時間判斷
 
 ### 判斷原理
-進行EDA時，我們發現發佈日期多以```publish time：YYYY/MM/DD```呈現，因此以```"published online"```作為發佈時間的判斷依據。
+進行EDA時，我們發現發佈日期多以```publish time：YYYY/MM/DD```呈現，因此以```"published online"```...等特定字作為發佈時間的判斷依據。
 
 ### 判斷流程```iftime(maintxt)```
 *  將論文內容```maintxt```依```\n```分割，並依次讀取整行內容
