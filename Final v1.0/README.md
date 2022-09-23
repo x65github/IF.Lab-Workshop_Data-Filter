@@ -37,7 +37,7 @@ PyPDF2、PyMuPDF、PDFMiner
 ### 特殊判斷```ignoretxt(maintxt)```
 部分論文來源的版面將造成論文標題非最大字體，故讀取到特定文字時```return False``` 以解決此問題。
 *  期刊－Human Resource Management Review：```"Human Resource Management Review"```
-*  出版社－Cellpress：```"Human Resource Management Review"```
+*  出版社－Cellpress：```"Resource"```
 
 ### 函數說明
 *  ```parse_line_layout(layout)```:抓取頁面內的文字高度，並回傳最大的文字高度 ```max``` 與文字內容```maxtxt```
