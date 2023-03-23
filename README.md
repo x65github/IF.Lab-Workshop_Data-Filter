@@ -52,7 +52,9 @@ import fitz
 ![image](https://raw.githubusercontent.com/x65github/IF.Lab-Workshop_Data-Filter/main/%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E/DataFilter_En_ProgramFlowchart.png)
 
 ### Demo code
+```
 pattern_in = "C:\\" #pdf來源(here為現在所在路徑)
 pattern_out = "C:\\" #pdf目的地(here為現在所在路徑):")
 metaitems=main(pattern_in,pattern_out) 
+```
 # Warning！The metada of the new PDF files can't be read by PyPDF2, since PyPDF2 can only read specific metadata。
